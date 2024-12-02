@@ -23,19 +23,19 @@ const works = [
       imgSrc: '/images/project-4.jpg',
       title: 'Online Property Management System',
       tags: ['Property Management', 'Web Application', 'Real Estate'],
-      projectLink: 'https://github.com/Imaludayanga6/online-property-management-system'
+      projectLink: 'https://github.com/Imaludayanga6/online-property-management-system-'
     },
     {
       imgSrc: '/images/project-5.jpg',
       title: 'Online Examination System',
       tags: ['Education', 'Assessment Platform', 'Web Development'],
-      projectLink: 'https://github.com/Imaludayanga6/online-examination-system'
+      projectLink: 'https://github.com/Imaludayanga6/-Online-Examination-System'
     },
     {
       imgSrc: '/images/project-6.jpg',
       title: 'vCard Personal portfolio',
       tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/Imaludayanga6/ImalUdayanaga'
+      projectLink: 'https://github.com/Imaludayanga6/Imal-Udayanaga-portfolio'
     },
   ];
 const Work = () => {
