@@ -18,23 +18,30 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 const App = () => {
   useGSAP(() => {
     const elements = gsap.utils.toArray('.reveal-up');
-
+  
     elements.forEach((element) => {
-      gsap.to(element, {
-        scrollTrigger: {
-          trigger: element,
-          scrub: true,
-        },
-        y: 0,
-        duration: 1,
-        ease: 'power2.out',
-        opacity: 1,
-      });
+      gsap.fromTo(
+        element,
+        { y: 20, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 90%', // Adjust trigger points
+            end: 'top 60%',
+            scrub: true,
+          },
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: 'power2.out',
+        }
+      );
     });
   });
+  
 
   return (
-    <ReactLenis root>
+    <ReactLenis root options={{ smooth: true, smoothTouch: true }}>
       {/* Background Video */}
       <div className="video-background">
         <video
