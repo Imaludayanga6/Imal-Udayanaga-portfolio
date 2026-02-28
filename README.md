@@ -1,54 +1,41 @@
-# My Personal Portfolio 🚀
+# 🚀 My Personal Portfolio
 
-Welcome to my portfolio repository! This is a modern, responsive personal website built using **React** and **Vite**, showcasing my skills, projects, and experience as a Full Stack Developer.
+Welcome to my portfolio! This is a modern, fast, and fully responsive personal website built using **React** and **Vite**. It showcases my technical skills, creative projects, and professional journey as a developer.
 
-🌐 **Live Demo:** [https://imal-udayanaga-portfolio.vercel.app/](https://imal-udayanaga-portfolio.vercel.app/)[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGfPodeeT5qg16cDk3G_ElaGPJxs3DnFO5UBFluB49waadBr-DaBXmcWF_3IXVq5ipngAf-980lqBH35Zy93V079QVQ5lElA0OCjbmDCWDlyAMWj4tGSGRppNVWz3O5Sui4HPQ53Q%3D%3D)]
+🌐 **Live Demo:** [https://imal-udayanaga-portfolio.vercel.app/](https://imal-udayanaga-portfolio.vercel.app/)
+
+---
 
 ## 👨‍💻 About Me
-I am a passionate Full Stack Developer dedicated to building and optimizing interactive, user-friendly web applications. I enjoy the entire development process—from design to deployment—and I'm constantly learning new techniques to improve performance and code quality.
+I'm **Imal Udayanaga**, a passionate Full Stack Developer (or Frontend Developer) dedicated to creating high-quality web applications. I love turning complex problems into simple, beautiful, and intuitive designs.
 
 ## 🛠️ Tech Stack
-This portfolio is built with:
-- **Frontend:** React.js, Vite
-- **Styling:** CSS3 / Tailwind CSS / Material UI
-- **Icons:** React Icons
+This project was built with the following technologies:
+- **Frontend:** React.js (v18+)
+- **Build Tool:** Vite (for lightning-fast development)
+- **Styling:** CSS3 / Tailwind CSS
 - **Deployment:** Vercel
+- **Version Control:** Git & GitHub
 
-## 🚀 Key Features
-- **Responsive Design:** Fully optimized for mobile, tablet, and desktop screens.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGfPodeeT5qg16cDk3G_ElaGPJxs3DnFO5UBFluB49waadBr-DaBXmcWF_3IXVq5ipngAf-980lqBH35Zy93V079QVQ5lElA0OCjbmDCWDlyAMWj4tGSGRppNVWz3O5Sui4HPQ53Q%3D%3D)]
-- **Modern UI:** Clean and interactive user interface.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGfPodeeT5qg16cDk3G_ElaGPJxs3DnFO5UBFluB49waadBr-DaBXmcWF_3IXVq5ipngAf-980lqBH35Zy93V079QVQ5lElA0OCjbmDCWDlyAMWj4tGSGRppNVWz3O5Sui4HPQ53Q%3D%3D)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHYUAwAohv07dMJaps6v3_cz_68wBgZV3PaF3Q7UKsypL9mg8aexyxgoJr44rR9I2b3bDHG29YLz-UMQnRR7EKAttQ_MIXpV5R2Kco15T6SZS1va4dk4q4Y8D512sw%3D)]
-- **Projects Showcase:** Highlights my best work with links to GitHub and live demos.
-- **Skills Section:** A breakdown of my technical expertise in frontend and backend development.
+## ✨ Key Features
+- **Responsive Design:** Optimized for all screen sizes (Mobile, Tablet, Desktop).
+- **Fast Loading:** High performance thanks to Vite's optimized build process.
+- **Modern UI:** Clean, minimalist, and professional user interface.
+- **Contact Form:** Integrated for direct communication.
+- **Project Gallery:** Showcasing my latest work with live links and source code.
 
-## 📂 Projects Mentioned
-- **Foody Website:** Full-stack food ordering app (React, Node, Express, MongoDB).[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGfPodeeT5qg16cDk3G_ElaGPJxs3DnFO5UBFluB49waadBr-DaBXmcWF_3IXVq5ipngAf-980lqBH35Zy93V079QVQ5lElA0OCjbmDCWDlyAMWj4tGSGRppNVWz3O5Sui4HPQ53Q%3D%3D)]
-- **Ecommerce Shop:** A product cart system using React & Redux Toolkit.[[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEBO7_LjHQqDKBUf-koV0qI4Hfx_VElZCKp25yGeGmZDhklmnaKWIpqo8Yg7iH9gb8V-NEMQ6O2739DzaFYdkjahr6GVXTyLU0Pulk9YiM942tC-8guONPonaac7h3SR4TVLSRHK_iyBJ8%3D)]
-- **Book Store API:** A robust backend API for book management.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGfPodeeT5qg16cDk3G_ElaGPJxs3DnFO5UBFluB49waadBr-DaBXmcWF_3IXVq5ipngAf-980lqBH35Zy93V079QVQ5lElA0OCjbmDCWDlyAMWj4tGSGRppNVWz3O5Sui4HPQ53Q%3D%3D)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEBO7_LjHQqDKBUf-koV0qI4Hfx_VElZCKp25yGeGmZDhklmnaKWIpqo8Yg7iH9gb8V-NEMQ6O2739DzaFYdkjahr6GVXTyLU0Pulk9YiM942tC-8guONPonaac7h3SR4TVLSRHK_iyBJ8%3D)]
-- **Story Books:** A platform to write and share stories with Google Auth.[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGfPodeeT5qg16cDk3G_ElaGPJxs3DnFO5UBFluB49waadBr-DaBXmcWF_3IXVq5ipngAf-980lqBH35Zy93V079QVQ5lElA0OCjbmDCWDlyAMWj4tGSGRppNVWz3O5Sui4HPQ53Q%3D%3D)][[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEBO7_LjHQqDKBUf-koV0qI4Hfx_VElZCKp25yGeGmZDhklmnaKWIpqo8Yg7iH9gb8V-NEMQ6O2739DzaFYdkjahr6GVXTyLU0Pulk9YiM942tC-8guONPonaac7h3SR4TVLSRHK_iyBJ8%3D)]
-
-## 🛠️ Installation & Setup
-To run this project locally, follow these steps:
+## 🚀 Getting Started
+To run this project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   ```[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGfPodeeT5qg16cDk3G_ElaGPJxs3DnFO5UBFluB49waadBr-DaBXmcWF_3IXVq5ipngAf-980lqBH35Zy93V079QVQ5lElA0OCjbmDCWDlyAMWj4tGSGRppNVWz3O5Sui4HPQ53Q%3D%3D)]
-
-2. **Navigate into the directory:**
+   git clone https://github.com/Imaludayanga6/Imal-Udayanaga-portfolio.git
+2. **Navigate to the folder:**
    ```bash
-   cd your-repo-name
-   ```[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGfPodeeT5qg16cDk3G_ElaGPJxs3DnFO5UBFluB49waadBr-DaBXmcWF_3IXVq5ipngAf-980lqBH35Zy93V079QVQ5lElA0OCjbmDCWDlyAMWj4tGSGRppNVWz3O5Sui4HPQ53Q%3D%3D)]
-
+   cd Imal-Udayanaga-portfolio
 3. **Install dependencies:**
    ```bash
    npm install
-   ```[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGfPodeeT5qg16cDk3G_ElaGPJxs3DnFO5UBFluB49waadBr-DaBXmcWF_3IXVq5ipngAf-980lqBH35Zy93V079QVQ5lElA0OCjbmDCWDlyAMWj4tGSGRppNVWz3O5Sui4HPQ53Q%3D%3D)]
-
-4. **Run the development server:**
+4. **Start the development server:**
    ```bash
    npm run dev
-   ```[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGfPodeeT5qg16cDk3G_ElaGPJxs3DnFO5UBFluB49waadBr-DaBXmcWF_3IXVq5ipngAf-980lqBH35Zy93V079QVQ5lElA0OCjbmDCWDlyAMWj4tGSGRppNVWz3O5Sui4HPQ53Q%3D%3D)]
-
----
-📫 **Let's Connect!**
-Feel free to reach out to me via my [Portfolio Contact Form](https://imal-udayanaga-portfolio.vercel.app/) or my social media links!
