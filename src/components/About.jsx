@@ -1,24 +1,21 @@
-
-
 const aboutItems = [
     {
-      label: 'Project done',
+      label: 'Projects done',
       number: 6
     },
     {
-      label: 'Years of experience',
+      label: 'Years of coding',
       number: 2
     }
   ];
+  
 const About = () => {
   return (
     <section id="about" className="section">
         <div className="container">
             <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12 reveal-up">
-                <p className="text-white mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-                I am a passionate and dedicated developer with experience in creating innovative mobile and web applications.
-                 My expertise includes Android app development, web development using the MERN stack, and crafting user-centric solutions to address real-world challenges.
-                  I am enthusiastic about learning new technologies and building impactful projects.
+                <p className="text-white mb-4 md:mb-8 md:text-xl">
+                    I am a fourth-year undergraduate pursuing a B.Sc. (Hons) in Information Technology at SLIIT, currently gaining hands-on industry experience as an IT Intern at Sri Lanka Insurance Corporation. I specialize in enterprise web application development using .NET and Oracle, alongside expertise in modern full-stack technologies like React and the MERN stack. I am a fast learner and a dedicated team player, eager to deliver impactful and user-centric solutions.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4 md:gap-7">
@@ -42,7 +39,7 @@ const About = () => {
                     }
 
                     <img src="/images/logo.png" alt="Logo" width={30} height={30} 
-                    className="ml-auto md:w-[40px] md:h-[40]" />
+                    className="ml-auto md:w-[40px] md:h-[40px]" />
 
                 </div>
             </div>

@@ -17,7 +17,7 @@ const SkillCard = ({
           <div>
             <h3>{label}</h3>
 
-            <p className="text-zinc-400 text-sm">
+            <p className="text-zinc-400 text-Ssm">
                 {desc}
             </p>
           </div>
@@ -25,11 +25,11 @@ const SkillCard = ({
       );
 }
 
-SkillCard.protoTypes ={
-    imgSrc:PropTypes.string.isRequired,
-    label:PropTypes.string.isRequired,
-    desc:PropTypes.string.isRequired,
-    classes:PropTypes.string
+SkillCard.propTypes = {   
+    imgSrc: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    classes: PropTypes.string
 }
 
 export default SkillCard

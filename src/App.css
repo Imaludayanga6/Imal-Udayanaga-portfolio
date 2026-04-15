@@ -1,33 +1,135 @@
-/* App.css */
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  scroll-behavior: smooth;
+  background: #000;
+}
+
+/* ================= VIDEO BACKGROUND ================= */
 .video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Push the video behind the content */
-    overflow: hidden;
-  }
-  
-  .background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire viewport */
-  }
-  
-  .content-wrapper {
-    position: relative; /* Ensures content layers over the video */
-    z-index: 1; /* Layers content above the video */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
+/* Dark overlay for readability */
+.video-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
 
-  .section {
-    padding: 80px 0; /* Increase if needed for a better scroll experience */
-  }
-  
-  
-  
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) contrast(1.1);
+}
+
+/* ================= CONTENT WRAPPER ================= */
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+/* Alternating section background */
+.section:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ================= GLASS EFFECT ================= */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  transition: 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ================= BUTTONS ================= */
+button, .btn {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 16px;
+}
+
+button:hover, .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+}
+
+/* ================= HEADINGS ================= */
+h1, h2, h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ================= ANIMATIONS ================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= SCROLLBAR (OPTIONAL COOL EFFECT) ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00c6ff;
+  border-radius: 10px;
+}

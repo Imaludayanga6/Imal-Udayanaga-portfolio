@@ -2,11 +2,13 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skill from "./components/Skill";
+import Journey from "./components/Journey"; // අලුතෙන් හදපු Journey එක import කළා
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import './App.css';
+import Certificates from "./components/Certificates";
 
+import './App.css';
 
 import { ReactLenis } from 'lenis/react';
 import gsap from 'gsap';
@@ -39,7 +41,6 @@ const App = () => {
     });
   });
   
-
   return (
     <ReactLenis root options={{ smooth: true, smoothTouch: true }}>
       {/* Background Video */}
@@ -64,6 +65,9 @@ const App = () => {
           <About />
           <Skill />
           <Work />
+          <Journey /> 
+          {/* <Work /> */}
+          <Certificates />
           <Contact />
         </main>
         <Footer />

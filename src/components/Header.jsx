@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Navbar from './Navbar'
 import { useState } from 'react'
 
@@ -14,7 +12,7 @@ const Header = () => {
               src="/images/logo.png"
               width={40}
               height={40}
-              alt="Imal Udayanaga"
+              alt="Imal Udayanga"
             />
           </a>
         </h1>

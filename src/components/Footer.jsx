@@ -10,12 +10,12 @@ const sitemap = [
       href: '#about'
     },
     {
-      label: 'Work',
-      href: '#work'
+      label: 'Journey', // මෙතනත් Journey දැම්මා
+      href: '#journey'
     },
     {
-      label: 'Reviews',
-      href: '#reviews'
+      label: 'Work',
+      href: '#work'
     },
     {
       label: 'Contact me',
@@ -30,21 +30,19 @@ const sitemap = [
     },
     {
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/imal-udayanga-b13631269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+      href: 'https://www.linkedin.com/in/imal-udayanga-b13631269' // Tracking link අයින් කලා
     },
     {
       label: 'Twitter X',
-      href: 'https://x.com/codewithsadee_'
+      href: 'https://x.com/imal_udayanga' // ඔයාගේ X link එකට හැදුවා
     },
     {
       label: 'Instagram',
-      href: 'https://www.instagram.com/imal_udayanga6/profilecard/?igsh=OXBsMnF6dnluZ2Q1/'
-    },
-    {
-      label: 'CodePen',
-      href: 'https://codepen.io/codewithsadee'
+      href: 'https://www.instagram.com/imal_udayanga6' // Tracking link අයින් කලා
     }
+    // CodePen අයින් කලා, මොකද ඒක ඔයාගේ නෙමේ තිබ්බේ
   ];
+
 const Footer = () => {
   return (
     <footer className="section">
@@ -55,15 +53,14 @@ const Footer = () => {
                         Let&apos;s work together today!
                     </h2>
 
-                    <ButtonPrimary href="mailto:sithumpersonal2002@gmail.com" label="Start Project" icon="chevron_right">
-
-                    </ButtonPrimary>
+                    {/* වෙනස් කරපු Email එක */}
+                    <ButtonPrimary href="mailto:imaludayanga6@gmail.com" label="Start Project" icon="chevron_right" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 lg:pl-20">
                     <div>
                         <p className="mb-2">
-                            sitemap
+                            Sitemap
                         </p>
 
                         <ul>
@@ -85,7 +82,7 @@ const Footer = () => {
                         <ul>
                             {socials.map(({ label ,href} ,key) => (
                                 <li key={key}>
-                                    <a href={href} target="_blank" className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200">
+                                    <a href={href} target="_blank" rel="noopener noreferrer" className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200">
                                         {label}
                                     </a>
                                 </li>
@@ -96,12 +93,12 @@ const Footer = () => {
             </div>
 
             <div className="flex items-center justify-between pt-10 mb-8">
-                <a href="" className="">
-                    <img src="/images/logo.png" width={40} height={40} alt="Log" />
+                <a href="#home" className="">
+                    <img src="/images/logo.png" width={40} height={40} alt="Logo" />
                 </a>
 
                 <p className="text-zinc-500 text-sm">
-                    &copy; 2024 <span className="text-zinc-200">
+                    &copy; 2025 <span className="text-zinc-200">
                         Imal Udayanga
                     </span>
                 </p>

@@ -2,58 +2,73 @@ import ProjectCard from "./ProjectCard";
 
 const works = [
     {
-      imgSrc: '/images/project-1.jpg',
-      title: 'Vehicle Service Management System',
-      tags: ['Service Management', 'MERN Stack', 'Web Application'],
-      projectLink: 'https://github.com/Imaludayanga6/Vehicle-service-Management-System'
+      imgSrc: '/images/Lifenet.png',
+      title: 'Life Net Dashboard Revamp (SLIC)',
+      tags: ['React', '.NET API', 'Oracle'],
+      description: 'Revamped an enterprise insurance dashboard featuring dynamic UI, interactive GWP charts, and Active Directory integration.',
+      projectLink: 'https://github.com/pramu-k/LifeIntranetProductionApp'
     },
     {
-      imgSrc: '/images/project-2.png',
+      imgSrc: '/images/LossIncident.png',
+      title: 'Loss Incident Reporting System',
+      tags: ['.NET Core', 'Oracle', 'Role-based'],
+      description: 'An enterprise role-based incident management system with strict permission controls developed during my SLIC internship.',
+      projectLink: 'https://github.com/pramu-k/LossIncidentReportingSystem'
+    },
+    {
+      imgSrc: '/images/gim-management.png',
+      title: 'Gym Microservices System',
+      tags: ['Microservices', 'React', 'Node.js'],
+      description: 'A distributed gym management application built using a microservices architecture for high scalability and modularity.',
+      projectLink: 'https://github.com/denuwan-umayanga/IT4020-gym-microservices'
+    },
+    {
+      imgSrc: '/images/Skill-Share.png',
+      title: 'Skill-Share Learning Platform',
+      tags: ['React', 'Spring Boot', 'MongoDB'],
+      description: 'A full-stack media-rich platform allowing users to create step-by-step guides, upload media, and engage with a community.',
+      projectLink: 'https://github.com/Imaludayanga6/Skill-Share'
+    },
+    {
+      imgSrc: '/images/vehicle-service.png',
+      title: 'Vehicle Service Management',
+      tags: ['MERN Stack', 'Express', 'Web App'],
+      description: 'A comprehensive service platform featuring appointment scheduling, mechanic assignment logic, and service history tracking.',
+      projectLink: 'https://github.com/senurasanketh/Online_Vehicle_Service'
+    },
+    {
+      imgSrc: '/images/MultitaskMobileApp.png', 
       title: 'Multitask Mobile App',
-      tags: ['Task Management', 'Mobile Development', 'Android Studio'],
+      tags: ['Android Studio', 'Kotlin', 'Mobile'],
+      description: 'An Android application designed to help users efficiently manage their daily tasks, time, and schedules.',
       projectLink: 'https://github.com/Imaludayanga6/Multi-Task-App'
     },
     {
-      imgSrc: '/images/project-3.jpg',
-      title: 'UI Design App',
-      tags: ['UI/UX Design', 'Mobile Application', 'Creative Layouts'],
-      projectLink: 'https://github.com/Imaludayanga6/UI-Design-App'
-    },
-    {
-      imgSrc: '/images/project-4.jpg',
-      title: 'Online Property Management System',
-      tags: ['Property Management', 'Web Application', 'Real Estate'],
+      imgSrc: '/images/OnlineProperty.png',
+      title: 'Online Property Management',
+      tags: ['PHP', 'JavaScript', 'HTML/CSS'],
+      description: 'A web-based system for landlords and tenants to manage property listings, rent tracking, and maintenance requests.',
       projectLink: 'https://github.com/Imaludayanga6/online-property-management-system-'
-    },
-    {
-      imgSrc: '/images/project-5.jpg',
-      title: 'Online Examination System',
-      tags: ['Education', 'Assessment Platform', 'Web Development'],
-      projectLink: 'https://github.com/Imaludayanga6/-Online-Examination-System'
-    },
-    {
-      imgSrc: '/images/project-6.jpg',
-      title: 'vCard Personal portfolio',
-      tags: ['Web-design', 'Development'],
-      projectLink: 'https://github.com/Imaludayanga6/Imal-Udayanaga-portfolio'
-    },
-  ];
+    }
+];
+
 const Work = () => {
   return (
     <section id="work" className="section">
         <div className="container">
-            <h2 className="headline-2 mb-8 reveal-up">My Portfolio highlights</h2>
+            <h2 className="headline-2 mb-8 reveal-up">My Portfolio Highlights</h2>
 
             <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
                 
-                {works.map(({ imgSrc, title, tags, projectLink}, key) => (
+                {works.map(({ imgSrc, title, tags, description, projectLink}, key) => (
                     <ProjectCard 
-                    key={key}
-                    imgSrc={imgSrc}
-                    title={title}
-                    tags={tags}
-                    projectLink={projectLink}
-                    classes="reveal-up"
+                      key={key}
+                      imgSrc={imgSrc}
+                      title={title}
+                      tags={tags}
+                      description={description} 
+                      projectLink={projectLink}
+                      //
                     />
                 ))}
             </div>
