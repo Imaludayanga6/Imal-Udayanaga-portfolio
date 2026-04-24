@@ -42,13 +42,18 @@ const Navbar = ({ navOpen }) => {
           className: 'nav-link'
         },
         {
-          label: 'Journey', // Reviews අයින් කරලා Journey දැම්මා
+          label: 'Work',
+          link: '#work',
+          className: 'nav-link'
+        },
+        {
+          label: 'Journey', 
           link: '#journey',
           className: 'nav-link'
         },
         {
-          label: 'Work',
-          link: '#work',
+          label: 'Certificates', 
+          link: '#certificates',   
           className: 'nav-link'
         },
         {

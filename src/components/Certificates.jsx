@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const certificates = [
   {
     title: "Introduction to MEAN Stack",
@@ -17,13 +19,32 @@ const certificates = [
   {
     title: "MongoDB Node.js Developer Path",
     platform: "MongoDB",
-    link: "https://learn.mongodb.com/c/tT-89iXKT2mStZLP_WD6OA"
+    subCertificates: [
+      {
+        title: "MongoDB CRUD Operations: Insert and Find Documents",
+        link: "LINK_1"
+      },
+      {
+        title: "MongoDB CRUD Operations: Modifying Query Results",
+        link: "LINK_2"
+      },
+      {
+        title: "MongoDB CRUD Operations: Replace and Delete Documents",
+        link: "LINK_3"
+      },
+      {
+        title: "MongoDB Data Modeling Intro",
+        link: "LINK_4"
+      }
+    ]
   }
 ];
 
 const Certificates = () => {
+
+  const [openIndex, setOpenIndex] = useState(null);
+
   return (
-    // id="certificates" එක දැම්මා, එතකොට Navbar එකෙන් මෙතනට ලින්ක් කරන්න පුළුවන්
     <section id="certificates" className="section">
       <div className="container">
         
@@ -35,41 +56,86 @@ const Certificates = () => {
           Professional courses and certifications I have completed to continuously improve my technical skills.
         </p>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* 👇 IMPORTANT FIX */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
+          
           {certificates.map((cert, index) => (
+            
             <div
               key={index}
-              className="bg-zinc-800/50 p-6 rounded-2xl ring-1 ring-inset ring-zinc-50/5 hover:bg-zinc-700/50 transition-colors flex flex-col h-full reveal-up"
+              className="bg-zinc-800/50 p-6 rounded-2xl ring-1 ring-inset ring-zinc-50/5 hover:bg-zinc-700/50 transition-all duration-300 flex flex-col self-start"
             >
               
-              {/* Icon and Platform Name */}
-              <div className="flex items-center gap-3 mb-4">
-                <span className="w-10 h-10 rounded-lg grid place-items-center bg-sky-400/10 text-sky-400 shrink-0">
-                  <span className="material-symbols-rounded" aria-hidden="true">workspace_premium</span>
-                </span>
-                <p className="text-sm text-zinc-400 font-medium">
-                  {cert.platform}
-                </p>
-              </div>
+              {/* Platform */}
+              <p className="text-sm text-zinc-400 mb-2">
+                {cert.platform}
+              </p>
 
-              {/* Certificate Title */}
-              <h3 className="text-lg font-semibold text-zinc-100 mb-6 flex-grow">
+              {/* Title */}
+              <h3 className="text-lg font-semibold text-zinc-100 mb-4 flex-grow">
                 {cert.title}
               </h3>
 
-              {/* View Button Link */}
-              <a
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm font-medium text-sky-400 hover:text-sky-300 transition-colors mt-auto w-max"
-              >
-                View Certificate
-                <span className="material-symbols-rounded text-base" aria-hidden="true">arrow_outward</span>
-              </a>
-              
+              {/* Normal Certificate */}
+              {cert.link && (
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-400 hover:text-sky-300 transition-colors"
+                >
+                  View Certificate
+                </a>
+              )}
+
+              {/* Dropdown Certificates */}
+              {cert.subCertificates && (
+                <div>
+                  <button
+                    onClick={() =>
+                      setOpenIndex(openIndex === index ? null : index)
+                    }
+                    className="flex items-center gap-2 text-sky-400 hover:text-sky-300 transition-colors"
+                  >
+                    View Certificates
+                    <span
+                      className={`transition-transform duration-300 ${
+                        openIndex === index ? "rotate-180" : ""
+                      }`}
+                    >
+                      ▼
+                    </span>
+                  </button>
+
+                  {/* Dropdown with animation */}
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      openIndex === index ? "max-h-40 mt-3" : "max-h-0"
+                    }`}
+                  >
+                    <ul className="space-y-2">
+                      {cert.subCertificates.map((sub, i) => (
+                        <li key={i}>
+                          <a
+                            href={sub.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-zinc-300 hover:text-sky-400 transition-colors"
+                          >
+                            {sub.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                </div>
+              )}
+
             </div>
+
           ))}
+
         </div>
 
       </div>
