@@ -98,9 +98,10 @@ const Footer = () => {
                 </a>
 
                 <p className="text-zinc-500 text-sm">
-                    &copy; 2025 <span className="text-zinc-200">
-                        Imal Udayanga
-                    </span>
+                &copy; {new Date().getFullYear()}{" "}
+                <span className="text-zinc-200">
+                    Imal Udayanga
+                </span>
                 </p>
             </div>
         </div>

@@ -22,19 +22,19 @@ const certificates = [
     subCertificates: [
       {
         title: "MongoDB CRUD Operations: Insert and Find Documents",
-        link: "LINK_1"
+        link: "https://learn.mongodb.com/c/3tskhC4cTDOfavAcRjFnSg"
       },
       {
         title: "MongoDB CRUD Operations: Modifying Query Results",
-        link: "LINK_2"
+        link: "https://learn.mongodb.com/c/8qOa8REfT0G7n0dUYhHUTg"
       },
       {
         title: "MongoDB CRUD Operations: Replace and Delete Documents",
-        link: "LINK_3"
+        link: "https://learn.mongodb.com/c/d4wqJmdSSUO2pB7C_8uwBw"
       },
       {
         title: "MongoDB Data Modeling Intro",
-        link: "LINK_4"
+        link: "https://learn.mongodb.com/c/OtTLYOO0R5SqVYwGHuNG_Q"
       }
     ]
   }
@@ -109,24 +109,24 @@ const Certificates = () => {
 
                   {/* Dropdown with animation */}
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      openIndex === index ? "max-h-40 mt-3" : "max-h-0"
-                    }`}
-                  >
-                    <ul className="space-y-2">
-                      {cert.subCertificates.map((sub, i) => (
-                        <li key={i}>
-                          <a
-                            href={sub.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm text-zinc-300 hover:text-sky-400 transition-colors"
-                          >
-                            {sub.title}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openIndex === index ? "max-h-[1000px] mt-3" : "max-h-0"
+                  }`}
+                >
+                    <ul className="space-y-2 list-disc pl-5">
+                    {cert.subCertificates.map((sub, i) => (
+                      <li key={i}>
+                        <a
+                          href={sub.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-zinc-300 hover:text-sky-400 transition-colors"
+                        >
+                          {sub.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                   </div>
 
                 </div>
