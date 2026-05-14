@@ -4,17 +4,17 @@ const certificates = [
   {
     title: "Introduction to MEAN Stack",
     platform: "Simplilearn",
-    link: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMzM1IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvdGh1bWJfNjg3OTAzNV8xNzIwMzc1MDc0LnBuZyIsInVzZXJuYW1lIjoiSy5BLkEuSW1hbCBVZGF5YW5nYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion"
+    link: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMzM1IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvdGh1bWJfNjg3OTAzNV8xNzIwMzc1MDc0LnBuZyIsInVzZXJuYW1lIjoiSy5BLkEuSW1hbCBVZGF5YW5nYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion",
   },
   {
     title: ".NET Fundamentals",
     platform: "Great Learning",
-    link: "https://www.mygreatlearning.com/certificate/TIMSQGTC"
+    link: "https://www.mygreatlearning.com/certificate/TIMSQGTC",
   },
   {
     title: "Foundational C# with Microsoft",
     platform: "Microsoft",
-    link: "https://www.freecodecamp.org/certification/fcc4ab8db6f-7ea4-4f49-8284-622dfef35eec/foundational-c-sharp-with-microsoft"
+    link: "https://www.freecodecamp.org/certification/fcc4ab8db6f-7ea4-4f49-8284-622dfef35eec/foundational-c-sharp-with-microsoft",
   },
   {
     title: "MongoDB Node.js Developer Path",
@@ -22,122 +22,215 @@ const certificates = [
     subCertificates: [
       {
         title: "MongoDB CRUD Operations: Insert and Find Documents",
-        link: "https://learn.mongodb.com/c/3tskhC4cTDOfavAcRjFnSg"
+        link: "https://learn.mongodb.com/c/3tskhC4cTDOfavAcRjFnSg",
       },
       {
         title: "MongoDB CRUD Operations: Modifying Query Results",
-        link: "https://learn.mongodb.com/c/8qOa8REfT0G7n0dUYhHUTg"
+        link: "https://learn.mongodb.com/c/8qOa8REfT0G7n0dUYhHUTg",
       },
       {
         title: "MongoDB CRUD Operations: Replace and Delete Documents",
-        link: "https://learn.mongodb.com/c/d4wqJmdSSUO2pB7C_8uwBw"
+        link: "https://learn.mongodb.com/c/d4wqJmdSSUO2pB7C_8uwBw",
       },
       {
         title: "MongoDB Data Modeling Intro",
-        link: "https://learn.mongodb.com/c/OtTLYOO0R5SqVYwGHuNG_Q"
-      }
-    ]
-  }
+        link: "https://learn.mongodb.com/c/OtTLYOO0R5SqVYwGHuNG_Q",
+      },
+    ],
+  },
 ];
 
 const Certificates = () => {
-
   const [openIndex, setOpenIndex] = useState(null);
+
+  const cardStyle = {
+    background: "var(--card-bg)",
+    border: "1px solid var(--card-border)",
+    boxShadow: "0 12px 30px var(--shadow-main)",
+  };
 
   return (
     <section id="certificates" className="section">
       <div className="container">
-        
-        <h2 className="headline-2 mb-4 reveal-up">
+        <h2
+          className="headline-2 reveal-up"
+          style={{
+            color: "var(--text-heading)",
+            marginBottom: "14px",
+            textAlign: "left",
+          }}
+        >
           My Certificates
         </h2>
-        
-        <p className="text-zinc-400 mb-8 max-w-[50ch] reveal-up">
-          Professional courses and certifications I have completed to continuously improve my technical skills.
+
+        <p
+          className="reveal-up"
+          style={{
+            color: "var(--text-muted)",
+            maxWidth: "55ch",
+            marginBottom: "38px",
+            lineHeight: "1.7",
+            textAlign: "left",
+          }}
+        >
+          Professional courses and certifications I have completed to
+          continuously improve my technical skills.
         </p>
 
-        {/* 👇 IMPORTANT FIX */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
-          
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "24px",
+            alignItems: "start",
+          }}
+        >
           {certificates.map((cert, index) => (
-            
             <div
               key={index}
-              className="bg-zinc-800/50 p-6 rounded-2xl ring-1 ring-inset ring-zinc-50/5 hover:bg-zinc-700/50 transition-all duration-300 flex flex-col self-start"
+              className="reveal-up"
+              style={{
+                ...cardStyle,
+                minHeight: "220px",
+                padding: "28px 24px",
+                borderRadius: "24px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                textAlign: "left",
+                transition: "0.3s ease",
+              }}
             >
-              
-              {/* Platform */}
-              <p className="text-sm text-zinc-400 mb-2">
-                {cert.platform}
-              </p>
+              <div>
+                <p
+                  style={{
+                    color: "var(--text-soft)",
+                    fontSize: "0.9rem",
+                    fontWeight: "500",
+                    marginBottom: "12px",
+                  }}
+                >
+                  {cert.platform}
+                </p>
 
-              {/* Title */}
-              <h3 className="text-lg font-semibold text-zinc-100 mb-4 flex-grow">
-                {cert.title}
-              </h3>
+                <h3
+                  style={{
+                    color: "var(--text-heading)",
+                    fontSize: "1.18rem",
+                    fontWeight: "700",
+                    lineHeight: "1.4",
+                    marginBottom: "22px",
+                  }}
+                >
+                  {cert.title}
+                </h3>
+              </div>
 
-              {/* Normal Certificate */}
               {cert.link && (
                 <a
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sky-400 hover:text-sky-300 transition-colors"
+                  style={{
+                    width: "fit-content",
+                    padding: "10px 16px",
+                    borderRadius: "999px",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    background: "linear-gradient(135deg, #00c6ff, #0072ff)",
+                    color: "#ffffff",
+                    fontSize: "0.95rem",
+                    fontWeight: "700",
+                    textDecoration: "none",
+                  }}
                 >
                   View Certificate
+                  <span
+                    className="material-symbols-rounded"
+                    style={{ color: "#ffffff", fontSize: "18px" }}
+                    aria-hidden="true"
+                  >
+                    arrow_outward
+                  </span>
                 </a>
               )}
 
-              {/* Dropdown Certificates */}
               {cert.subCertificates && (
                 <div>
                   <button
+                    type="button"
                     onClick={() =>
                       setOpenIndex(openIndex === index ? null : index)
                     }
-                    className="flex items-center gap-2 text-sky-400 hover:text-sky-300 transition-colors"
+                    style={{
+                      width: "fit-content",
+                      padding: "10px 16px",
+                      borderRadius: "999px",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      background: "linear-gradient(135deg, #00c6ff, #0072ff)",
+                      color: "#ffffff",
+                      fontSize: "0.95rem",
+                      fontWeight: "700",
+                      border: "none",
+                      cursor: "pointer",
+                    }}
                   >
                     View Certificates
                     <span
-                      className={`transition-transform duration-300 ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
+                      style={{
+                        color: "#ffffff",
+                        transition: "0.3s ease",
+                        transform:
+                          openIndex === index ? "rotate(180deg)" : "rotate(0)",
+                      }}
                     >
                       ▼
                     </span>
                   </button>
 
-                  {/* Dropdown with animation */}
                   <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    openIndex === index ? "max-h-[1000px] mt-3" : "max-h-0"
-                  }`}
-                >
-                    <ul className="space-y-2 list-disc pl-5">
-                    {cert.subCertificates.map((sub, i) => (
-                      <li key={i}>
-                        <a
-                          href={sub.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-zinc-300 hover:text-sky-400 transition-colors"
-                        >
-                          {sub.title}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                    style={{
+                      overflow: "hidden",
+                      maxHeight: openIndex === index ? "1000px" : "0",
+                      marginTop: openIndex === index ? "18px" : "0",
+                      transition: "0.3s ease",
+                    }}
+                  >
+                    <ul
+                      style={{
+                        margin: 0,
+                        paddingLeft: "20px",
+                        display: "grid",
+                        gap: "10px",
+                      }}
+                    >
+                      {cert.subCertificates.map((sub, i) => (
+                        <li key={i} style={{ color: "var(--text-muted)" }}>
+                          <a
+                            href={sub.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              color: "var(--text-muted)",
+                              fontSize: "0.9rem",
+                              lineHeight: "1.5",
+                              textDecoration: "none",
+                            }}
+                          >
+                            {sub.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-
                 </div>
               )}
-
             </div>
-
           ))}
-
         </div>
-
       </div>
     </section>
   );
