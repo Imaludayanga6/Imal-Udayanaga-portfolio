@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import PortfolioPage from "./pages/PortfolioPage";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
+import AdminProjects from "./pages/AdminProjects";
+import AdminSettings from "./pages/AdminSettings";
+import AdminLayout from "./components/AdminLayout";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import "./App.css";
@@ -23,13 +26,18 @@ const App = () => {
       {/* Admin Routes */}
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route
-        path="/admin/dashboard"
+        path="/admin"
         element={
           <ProtectedRoute>
-            <AdminDashboard />
+            <AdminLayout />
           </ProtectedRoute>
         }
-      />
+      >
+        <Route index element={<Navigate to="dashboard" replace />} />
+        <Route path="dashboard" element={<AdminDashboard />} />
+        <Route path="projects" element={<AdminProjects />} />
+        <Route path="settings" element={<AdminSettings />} />
+      </Route>
 
       {/* Catch-all - redirect to home */}
       <Route path="*" element={<PortfolioPage theme={theme} toggleTheme={toggleTheme} />} />
