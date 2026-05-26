@@ -54,7 +54,7 @@ const Footer = () => {
                     </h2>
 
                     {/* වෙනස් කරපු Email එක */}
-                    <ButtonPrimary href="mailto:imaludayanga6@gmail.com" label="Start Project" icon="chevron_right" />
+                    <ButtonPrimary href="#contact" label="Start Project" icon="chevron_right" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 lg:pl-20">
