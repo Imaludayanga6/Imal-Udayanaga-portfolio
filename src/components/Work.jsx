@@ -16,8 +16,6 @@ const works = [
       "Integrated Active Directory authentication",
       "Connected frontend components with Oracle-backed APIs",
     ],
-    projectLink:
-      "https://github.com/pramu-k/LifeIntranetProductionApp",
   },
   {
     imgSrc: "/images/LossIncident.png",
@@ -33,8 +31,6 @@ const works = [
       "Configured user permission handling",
       "Integrated the application with Oracle Database",
     ],
-    projectLink:
-      "https://github.com/pramu-k/LossIncidentReportingSystem",
   },
   {
     imgSrc: "/images/gim-management.png",
@@ -862,37 +858,40 @@ const Work = ({ theme }) => {
                 </ul>
 
                 <div className="work-modal-actions">
-                  <a
-                    href={selectedProject.projectLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="work-modal-github"
-                  >
-                    <span
-                      className="material-symbols-rounded"
-                      aria-hidden="true"
-                    >
-                      code
-                    </span>
+  {selectedProject.projectLink && (
+    <a
+      href={selectedProject.projectLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="work-modal-github"
+      aria-label={`View ${selectedProject.title} on GitHub`}
+    >
+      <span
+        className="material-symbols-rounded"
+        aria-hidden="true"
+      >
+        code
+      </span>
 
-                    View on GitHub
+      View on GitHub
 
-                    <span
-                      className="material-symbols-rounded"
-                      aria-hidden="true"
-                    >
-                      arrow_outward
-                    </span>
-                  </a>
+      <span
+        className="material-symbols-rounded"
+        aria-hidden="true"
+      >
+        arrow_outward
+      </span>
+    </a>
+  )}
 
-                  <button
-                    type="button"
-                    className="work-modal-back"
-                    onClick={closeModal}
-                  >
-                    Back to Projects
-                  </button>
-                </div>
+  <button
+    type="button"
+    className="work-modal-back"
+    onClick={closeModal}
+  >
+    Back to Projects
+  </button>
+</div>
               </div>
             </div>
           </div>
