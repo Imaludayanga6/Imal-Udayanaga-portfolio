@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -16,15 +16,32 @@ import { ReactLenis } from "lenis/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { Moon, Sun } from "lucide-react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const App = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    if (savedTheme === "dark" || savedTheme === "light") {
+      return savedTheme;
+    }
+
+    return "dark";
+  });
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+    setTheme((currentTheme) =>
+      currentTheme === "dark" ? "light" : "dark"
+    );
   };
+
+  useEffect(() => {
+    localStorage.setItem("portfolio-theme", theme);
+
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
 
   useGSAP(() => {
     const elements = gsap.utils.toArray(".reveal-up");
@@ -58,6 +75,8 @@ const App = () => {
     };
   }, []);
 
+  const nextTheme = theme === "dark" ? "light" : "dark";
+
   return (
     <ReactLenis
       root
@@ -69,7 +88,7 @@ const App = () => {
     >
       <div className={`app ${theme}`}>
         {/* Background Video */}
-        <div className="video-background">
+        <div className="video-background" aria-hidden="true">
           <video
             autoPlay
             loop
@@ -79,19 +98,28 @@ const App = () => {
             className="background-video"
           >
             <source src="/images/background.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </div>
 
         {/* Background Gradient Overlay */}
-        <div className="background-glow"></div>
+        <div className="background-glow" aria-hidden="true" />
 
         {/* Theme Toggle Button */}
-        <button className="theme-toggle-btn" onClick={toggleTheme}>
-          {theme === "dark" ? "White Mode" : "Black Mode"}
+        <button
+          type="button"
+          className="theme-toggle-btn"
+          onClick={toggleTheme}
+          aria-label={`Switch to ${nextTheme} mode`}
+          title={`Switch to ${nextTheme} mode`}
+        >
+          {theme === "dark" ? (
+            <Sun size={21} strokeWidth={2} aria-hidden="true" />
+          ) : (
+            <Moon size={21} strokeWidth={2} aria-hidden="true" />
+          )}
         </button>
 
-        {/* Content */}
+        {/* Main Content */}
         <div className="content-wrapper">
           <Header />
 
@@ -99,7 +127,7 @@ const App = () => {
             <Hero />
             <About />
             <Skill />
-            <Work />
+            <Work theme={theme} />
             <Journey />
             <Certificates />
             <Contact />

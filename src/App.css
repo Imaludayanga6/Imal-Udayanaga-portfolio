@@ -306,7 +306,7 @@ body {
 }
 
 /* Hero image background */
-.hero-image-box {
+/* .hero-image-box {
   border: 1px solid var(--card-border);
   box-shadow: 0 24px 60px var(--shadow-main);
   transition: 0.35s ease;
@@ -326,7 +326,7 @@ body {
     rgba(0, 0, 0, 0.08),
     rgba(255, 255, 255, 0.72)
   );
-}
+} */
 
 /* ================= HEADER / NAV FIX ================= */
 .app header {
@@ -1571,5 +1571,120 @@ button:active,
   #certificates .certificate-card {
     min-height: auto !important;
   }
+}
+
+.theme-toggle-btn {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  z-index: 2000;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+
+  background: rgba(10, 15, 30, 0.72);
+  color: #ffffff;
+
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px) rotate(8deg);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.94);
+}
+
+.theme-toggle-btn:focus-visible {
+  outline: 3px solid rgba(96, 165, 250, 0.45);
+  outline-offset: 4px;
+}
+
+.app.light .theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.82);
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.14);
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.14);
+}
+
+.app.light .theme-toggle-btn:hover {
+  border-color: rgba(15, 23, 42, 0.3);
+}
+
+@media (max-width: 768px) {
+  .theme-toggle-btn {
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.project-card {
+  width: 100%;
+  padding: 0;
+  border: none;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+.project-card:focus-visible {
+  outline: 3px solid rgba(96, 165, 250, 0.55);
+  outline-offset: 4px;
+}
+
+.project-card-wrapper {
+  width: 100%;
+}
+
+.journey-highlight-list {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.journey-highlight-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.journey-highlight-list .material-symbols-rounded {
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 19px;
+  color: #38bdf8 !important;
 }
 }
